@@ -1,14 +1,109 @@
  <!DOCTYPE html>
 <html>
 <head>
-	<title>Page Title</title>
+	<style>
+		body { 
+			background-color:#000010;
+		}
+		#MainMenu {
+			height: 1000px;
+			background-color:#2B303A;
+			margin: 20px;
+		}
+		#ListItem {
+			width: 408px;
+			height: 350px;
+			background-color:#5e5e5e;
+			margin: 25px;
+			display: inline-block;
+			box-shadow: 10px 10px;
+		}
+		#SubItem {
+			width: 388px;
+			height: 350px;
+			background-color:#CaCaCa;
+			float: right; 
+		}
+		#script_image {
+			width: 135px;
+			height: 128px;
+			background-color:#FFFFFF;
+			display: inline-block;
+			margin: 0px;
+		}
+		#script_data {
+			width: 240px;
+			height: 128px;
+			background-color:#000000;
+			display: inline-block;
+			margin: 0px;
+		}
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		  position: fixed;
+		  top: 0;
+		  width: 100%;
+		}
+		li {
+			float: left;
+		}
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+		li a:hover:not(.active) {
+			background-color: #4CAF50;
+		}
+	</style>
+	<title>Skrit</title>
 </head>
 
 
-<body style="background-color:black;">
-	<div style="background-color:#1c1919; color:white; padding:20px;">
-		<h1>This is a Heading</h1>
-		<p>This is a paragraph.</p>
+<body>
+	<div id="NavBar">
+		<ul>
+		  <li><a href="https://github.com/D3m81/Skrit_resources">Github</a></li>
+		  <li><a href="#news">Discord</a></li>
+		  <li><a href="#contact"></a></li>
+		  <li><a href="#about"></a></li>
+		</ul>
+	</div>
+	</br>
+	</br>
+	<div id="MainMenu">
+		
+		<div>
+			<div id="ListItem">
+				<div id="SubItem">
+					<div id="script_image">
+						 <img src="url" alt="Unable to load image">
+					</div>
+					<div id="script_data">
+						
+					</div>
+				</div>
+			</div>
+			
+			<div id="ListItem">
+				<div id="SubItem">
+				</div>
+			</div>
+			<div id="ListItem">
+				<div id="SubItem">
+				</div>
+			</div>
+			<div id="ListItem">
+				<div id="SubItem">
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html> 
