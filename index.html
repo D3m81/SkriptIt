@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<style>
@@ -6,79 +6,95 @@
 			background-color:#000010;
 		}
 		#MainMenu {
+			border-radius: 5px;
 			height: 1000px;
 			background-color:#2B303A;
 			margin: 20px;
+			margin-top: 60px;
 		}
 		#ListItem {
+			border-radius: 10px;
 			width: 408px;
 			height: 350px;
 			background-color:#5e5e5e;
 			margin: 25px;
 			display: inline-block;
-			box-shadow: 10px 10px;
+			box-shadow: 10px 10px 10px rgba(0,0,0,0.5)
 		}
 		#SubItem {
-			width: 388px;
+			border-radius: 5px;
+			width: 398px;
 			height: 350px;
 			background-color:#CaCaCa;
 			float: right; 
+			margin: 0px;
+			padding: 0px;
 		}
 		#script_image {
-			width: 135px;
-			height: 128px;
+			width: 64px;
+			height: 64px;
+			margin: 5px;
 			background-color:#FFFFFF;
-			display: inline-block;
-			margin: 0px;
+			
+		}
+		#script_buttons {
+			width: 388px;
+			height: 50px;
+			list-style-type: none;
+			overflow: hidden;
 		}
 		#script_data {
-			width: 240px;
-			height: 128px;
-			background-color:#000000;
-			display: inline-block;
-			margin: 0px;
+			text-align: left;
+			margin: 5px;
+			height: 210px;
 		}
 		ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #333;
-		  position: fixed;
-		  top: 0;
-		  width: 100%;
+			border-radius: 10px;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+			position: fixed;
+			top: 0;
+			width: 99%;
 		}
 		li {
 			float: left;
 		}
 		li a {
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
 		}
 		li a:hover:not(.active) {
 			background-color: #4CAF50;
 		}
 	</style>
+	<script>
+		function httpGet(theUrl)
+		{
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+			xmlHttp.send( null );
+			alert(xmlHttp.responseText);
+		}
+	</script>
 	<title>Skrit</title>
 </head>
 
 
-<body>
+<body onload="httpGet('https://raw.githubusercontent.com/D3m81/Skrit_resources/master/scripts/script_list.txt');">
 	<div id="NavBar">
 		<ul>
-		  <li><a href="https://github.com/D3m81/Skrit_resources">Github</a></li>
-		  <li><a href="#news">Discord</a></li>
-		  <li><a href="#contact"></a></li>
-		  <li><a href="#about"></a></li>
+			<img src="Assets/logo.png" alt="Unable to load image" style="float: left; width: 120px;">
+			<li><a href="https://www.github.com/D3m81/Skrit_resources" style="margin-left: 20px;"><strong>Github</strong></a></li>
+			<li><a href="https://www.google.com"><strong>Discord</strong></a></li>
 		</ul>
 	</div>
-	</br>
-	</br>
 	<div id="MainMenu">
-		
 		<div>
 			<div id="ListItem">
 				<div id="SubItem">
@@ -86,7 +102,21 @@
 						 <img src="url" alt="Unable to load image">
 					</div>
 					<div id="script_data">
-						
+						<p>
+							<font size="+2"><strong>Generic Scoreboard Script</strong></font></br>
+						</p>
+						<p>
+							<strong>Created by: </strong>DemyanM ∙ <strong>Version: </strong>0.1
+							<p style="border: 1px solid black; height: 130px">
+							Generic Scoreboard script is a very basic yet also advanced script bla bla...
+							</p>
+						</p>
+					</div>
+					<div id="script_buttons">
+						<font size="+1">
+							<li><a href="url" style="background-color: #0036cc; border-radius: 10px; margin-left:10px; box-shadow: 5px 5px black; width: 140px; padding: 5px 16px"><strong>Download</strong></a></li>
+							<li><a href="url" style="background-color: #6e6e6e; border-radius: 10px; margin-left:15px;  box-shadow: 5px 5px black; width: 140px; padding: 5px 16px"><strong>View Raw</strong></a></li>
+						</font>
 					</div>
 				</div>
 			</div>
