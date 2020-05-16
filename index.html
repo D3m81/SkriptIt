@@ -12,7 +12,7 @@
 			margin: 20px;
 			margin-top: 60px;
 		}
-		#ListItem {
+		.ListItem {
 			border-radius: 10px;
 			width: 408px;
 			height: 350px;
@@ -21,7 +21,7 @@
 			display: inline-block;
 			box-shadow: 10px 10px 10px rgba(0,0,0,0.5)
 		}
-		#SubItem {
+		.SubItem {
 			border-radius: 5px;
 			width: 398px;
 			height: 350px;
@@ -30,20 +30,20 @@
 			margin: 0px;
 			padding: 0px;
 		}
-		#script_image {
+		.script_image {
 			width: 64px;
 			height: 64px;
 			margin: 5px;
 			background-color:#FFFFFF;
 			
 		}
-		#script_buttons {
+		.script_buttons {
 			width: 388px;
 			height: 50px;
 			list-style-type: none;
 			overflow: hidden;
 		}
-		#script_data {
+		.script_data {
 			text-align: left;
 			margin: 5px;
 			height: 210px;
@@ -74,19 +74,25 @@
 		}
 	</style>
 	<script>
+		function GetScripts()
+		{
+			var scripts = httpGet('https://raw.githubusercontent.com/D3m81/SkriptIt/master/Assets/script_list.txt');
+			var list = scripts.split(/\n/)
+			alert("["+Object.keys(scripts).length+"]" + scripts);
+		}
 		function httpGet(theUrl)
 		{
 			var xmlHttp = new XMLHttpRequest();
 			xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
 			xmlHttp.send( null );
-			alert(xmlHttp.responseText);
+			return xmlHttp.responseText;
 		}
 	</script>
 	<title>Skrit</title>
 </head>
 
 
-<body onload="httpGet('https://raw.githubusercontent.com/D3m81/Skrit_resources/master/scripts/script_list.txt');">
+<body onload="GetScripts();">
 	<div id="NavBar">
 		<ul>
 			<img src="Assets/logo.png" alt="Unable to load image" style="float: left; width: 120px;">
@@ -96,12 +102,13 @@
 	</div>
 	<div id="MainMenu">
 		<div>
-			<div id="ListItem">
-				<div id="SubItem">
-					<div id="script_image">
+			
+			<div class="ListItem">
+				<div class="SubItem">
+					<div class="script_image" >
 						 <img src="url" alt="Unable to load image">
 					</div>
-					<div id="script_data">
+					<div class="script_data">
 						<p>
 							<font size="+2"><strong>Generic Scoreboard Script</strong></font></br>
 						</p>
@@ -112,7 +119,7 @@
 							</p>
 						</p>
 					</div>
-					<div id="script_buttons">
+					<div class="script_buttons">
 						<font size="+1">
 							<li><a href="url" style="background-color: #0036cc; border-radius: 10px; margin-left:10px; box-shadow: 5px 5px black; width: 140px; padding: 5px 16px"><strong>Download</strong></a></li>
 							<li><a href="url" style="background-color: #6e6e6e; border-radius: 10px; margin-left:15px;  box-shadow: 5px 5px black; width: 140px; padding: 5px 16px"><strong>View Raw</strong></a></li>
@@ -121,18 +128,8 @@
 				</div>
 			</div>
 			
-			<div id="ListItem">
-				<div id="SubItem">
-				</div>
-			</div>
-			<div id="ListItem">
-				<div id="SubItem">
-				</div>
-			</div>
-			<div id="ListItem">
-				<div id="SubItem">
-				</div>
-			</div>
+			
+			
 		</div>
 	</div>
 </body>
